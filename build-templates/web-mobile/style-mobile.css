@@ -1,0 +1,424 @@
+html {
+	-ms-touch-action: none;
+}
+
+body,
+canvas,
+div {
+	display: block;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-khtml-user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Remove spin of input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	/* display: none; <- Crashes Chrome on hover */
+	-webkit-appearance: none;
+	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	border: 0;
+	margin: 0;
+
+	cursor: default;
+	color: #888;
+	background-color: #333;
+
+	text-align: center;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+
+	display: flex;
+	flex-direction: column;
+
+	overflow: hidden;
+}
+
+#Cocos2dGameContainer {
+	position: absolute;
+	margin: 0;
+	left: 0px;
+	top: 0px;
+
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+}
+
+canvas {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+a:link,
+a:visited {
+	color: #666;
+}
+
+a:active,
+a:hover {
+	color: #666;
+}
+
+p.header {
+	font-size: small;
+}
+
+p.footer {
+	font-size: x-small;
+}
+
+#splash {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #a9c3ff url(./bg.png) no-repeat center;
+	background-size: cover;
+	align-items: center;
+}
+
+#loading-animation {
+	position: absolute;
+	padding: 0px;
+	width: 7.5%;
+	margin-top: 20%;
+	margin-left: -5%;
+}
+
+#loading-animation_shadow {
+	position: absolute;
+	top: 1195px;
+	left: 1760px;
+	padding: 0px;
+}
+
+.progress-bar {
+	position: absolute;
+	left: 1400px;
+	top: 1365px;
+	width: 1044px;
+	height: 104px;
+	background: url(./Resources/loadbar_area.png) no-repeat center;
+}
+
+.progress-bar span {
+	position: absolute;
+	display: block;
+	top: 14.5px;
+	left: 22px;
+	height: 50px;
+	border-radius: 100px;
+	transition: width 0.4s ease-in-out;
+	background-color: #ffd542;
+	background-position: center;
+}
+
+.cloud1 {
+	position: absolute;
+	top: 1650px;
+	left: -50px;
+	padding: 0px;
+	animation: animate-cloud1 3s ease-in-out infinite;
+}
+.cloud2 {
+	position: absolute;
+	top: 1550px;
+	left: -365px;
+	transform: rotate(90deg);
+	padding: 0px;
+	animation: animate-cloud2 3.2s ease-in-out infinite;
+}
+.cloud3 {
+	position: absolute;
+	top: 1820px;
+	left: 2350px;
+	transform: rotate(25deg);
+	scale: 1.1;
+	padding: 0px;
+	animation: animate-cloud3 3.5s ease-in-out infinite;
+}
+.cloud4 {
+	position: absolute;
+	top: 1550px;
+	right: -600px;
+	padding: 0px;
+	animation: animate-cloud4 3.7s ease-in-out infinite;
+}
+
+.icon1 {
+	position: absolute;
+	top: 250px;
+	right: 140px;
+	padding: 0px;
+	animation: animate-icon 8s ease-in-out infinite;
+}
+.icon2 {
+	position: absolute;
+	top: 1050px;
+	right: 570px;
+	padding: 0px;
+	animation: animate-icon 7s ease-in-out infinite;
+}
+.icon3 {
+	position: absolute;
+	top: 570px;
+	right: 860px;
+	padding: 0px;
+	animation: animate-icon 7.2s ease-in-out infinite;
+}
+.icon4 {
+	position: absolute;
+	top: 360px;
+	left: 775px;
+	padding: 0px;
+	animation: animate-icon 7.5s ease-in-out infinite;
+}
+.icon5 {
+	position: absolute;
+	top: 787px;
+	left: 110px;
+	padding: 0px;
+	animation: animate-icon 8.2s ease-in-out infinite;
+}
+.icon6 {
+	position: absolute;
+	top: 220px;
+	left: 380px;
+	padding: 0px;
+	animation: animate-icon 8.5s ease-in-out infinite;
+}
+.icon7 {
+	position: absolute;
+	top: 1070px;
+	left: 700px;
+	padding: 0px;
+	animation: animate-icon 7.9s ease-in-out infinite;
+}
+.icon8 {
+	position: absolute;
+	top: 1490px;
+	right: 635px;
+	padding: 0px;
+	animation: animate-icon 6.8s ease-in-out infinite;
+}
+.icon9 {
+	position: absolute;
+	top: 130px;
+	right: 585px;
+	padding: 0px;
+	animation: animate-icon 6.5s ease-in-out infinite;
+}
+.icon10 {
+	position: absolute;
+	top: 1230px;
+	right: 215px;
+	padding: 0px;
+	animation: animate-icon 8s ease-in-out infinite;
+}
+.icon11 {
+	position: absolute;
+	top: 1800px;
+	left: 125px;
+	padding: 0px;
+	animation: animate-icon 9.2s ease-in-out infinite;
+}
+
+.bubble1 {
+	position: absolute;
+	top: 1740px;
+	left: 1960px;
+	padding: 0px;
+	animation: animate-bubble1 5s ease-in-out infinite;
+}
+.bubble2 {
+	position: absolute;
+	top: 650px;
+	right: 130px;
+	padding: 0px;
+	animation: animate-bubble2 4s ease-in-out infinite;
+}
+.bubble3 {
+	position: absolute;
+	top: 170px;
+	right: 910px;
+	scale: 0.65;
+	padding: 0px;
+	animation: animate-bubble3 4.2s ease-in-out infinite;
+}
+.bubble4 {
+	position: absolute;
+	top: 1250px;
+	left: 900px;
+	scale: 0.4;
+	padding: 0px;
+	animation: animate-bubble4 4.7s ease-in-out infinite;
+}
+.bubble5 {
+	position: absolute;
+	top: 1350px;
+	left: 800px;
+	scale: 0.7;
+	padding: 0px;
+	animation: animate-bubble5 4.5s ease-in-out infinite;
+}
+
+.stripes span {
+	background-size: 30px 30px;
+	background-image: linear-gradient(
+		135deg,
+		rgba(255, 255, 255, 0.15) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.15) 50%,
+		rgba(255, 255, 255, 0.15) 75%,
+		transparent 75%,
+		transparent
+	);
+
+	animation: animate-stripes 1s linear infinite;
+}
+
+@keyframes animate-stripes {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 60px 0;
+	}
+}
+
+@keyframes animate-cloud1 {
+	0% {
+		top: 1650px;
+	}
+	50% {
+		top: 1550px;
+	}
+	100% {
+		top: 1650px;
+	}
+}
+
+@keyframes animate-cloud2 {
+	0% {
+		top: 1550px;
+	}
+	50% {
+		top: 1450px;
+	}
+	100% {
+		top: 1550px;
+	}
+}
+
+@keyframes animate-cloud3 {
+	0% {
+		top: 1820px;
+	}
+	50% {
+		top: 1720px;
+	}
+	100% {
+		top: 1820px;
+	}
+}
+
+@keyframes animate-cloud4 {
+	0% {
+		top: 1550px;
+	}
+	50% {
+		top: 1450px;
+	}
+	100% {
+		top: 1550px;
+	}
+}
+
+@keyframes animate-bubble1 {
+	0% {
+		top: 1740px;
+	}
+	50% {
+		top: 1540px;
+	}
+	100% {
+		top: 1740px;
+	}
+}
+
+@keyframes animate-bubble2 {
+	0% {
+		top: 650px;
+	}
+	50% {
+		top: 550px;
+	}
+	100% {
+		top: 650px;
+	}
+}
+
+@keyframes animate-bubble3 {
+	0% {
+		top: 170px;
+	}
+	50% {
+		top: 70px;
+	}
+	100% {
+		top: 170px;
+	}
+}
+
+@keyframes animate-bubble4 {
+	0% {
+		top: 1250px;
+	}
+	50% {
+		top: 1050px;
+	}
+	100% {
+		top: 1250px;
+	}
+}
+
+@keyframes animate-bubble5 {
+	0% {
+		top: 1350px;
+	}
+	50% {
+		top: 1150px;
+	}
+	100% {
+		top: 1350px;
+	}
+}
+
+@keyframes animate-icon {
+	0% {
+		scale: 1;
+	}
+	50% {
+		scale: 0.9;
+	}
+	100% {
+		scale: 1;
+	}
+}
