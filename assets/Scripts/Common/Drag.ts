@@ -13,7 +13,7 @@ export default class Drag {
 		return this._isTouched;
 	}
 
-	public interactable: boolean = false; // 드래그 노드 상호작용 가능 여부
+	public interactable: boolean = false; // 드래그 노드 상호작용 가능 여부 테스트
 
 	public initParent: cc.Node = null; // 드래그 노드의 초기 부모 노드
 	public initPos: cc.Vec2 = null; // 드래그 노드의 초기 위치
